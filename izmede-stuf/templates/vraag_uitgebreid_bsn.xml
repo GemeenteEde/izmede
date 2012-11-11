@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SectorModel:vraagBericht xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StUF="http://www.egem.nl/StUF/StUF0204" xmlns:SectorModel="http://www.egem.nl/StUF/sector/bg/0204">
+   <stuurgegevens xmlns="http://www.egem.nl/StUF/StUF0204">
+      <berichtsoort>Lv01</berichtsoort>
+      <entiteittype>PRS</entiteittype>
+      <sectormodel>BG</sectormodel>
+      <versieStUF>0204</versieStUF>
+      <versieSectormodel>0204</versieSectormodel>
+      <zender>
+         <organisatie />
+         <applicatie>IZM</applicatie>
+      </zender>
+      <ontvanger>
+         <applicatie>CGM</applicatie>
+      </ontvanger>
+      <referentienummer>%(referentienummer)s</referentienummer>
+      <tijdstipBericht>%(tijdstipbericht)s</tijdstipBericht>
+      <vraag>
+         <sortering>07</sortering>
+         <maximumAantal>100</maximumAantal>
+      </vraag>
+   </stuurgegevens>
+   <SectorModel:body xmlns="http://www.egem.nl/StUF/sector/bg/0204" xmlns:StUF="http://www.egem.nl/StUF/StUF0204" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <PRS soortEntiteit="F">
+         <bsn-nummer>%(BSN_van)s</bsn-nummer>
+      </PRS>
+      <PRS soortEntiteit="F">
+         <bsn-nummer>%(BSN_tot)s</bsn-nummer>
+      </PRS>
+
+      <PRS soortEntiteit="F">
+         <a-nummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <bsn-nummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <voornamen xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <voorletters xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <voorvoegselGeslachtsnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <geslachtsnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <geboortedatum xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <geboorteplaats xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <codeGeboorteland xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <geslachtsaanduiding xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <datumOverlijden xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <indicatieGeheim xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <datumInschrijvingGemeente xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <datumOpschortingBijhouding xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <indicatieGezagMinderjarige xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <indicatieCuratelestelling xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <burgerlijkeStaat xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <extraElementen>
+            <StUF:extraElement naam="aanduidingGegevensInOnderzoek" xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <StUF:extraElement naam="aanduidingNaamgebruikOmschrijving" xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <StUF:extraElement naam="omschrijvingBurgerlijkeStaat" xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <StUF:extraElement naam="geboortelandnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <StUF:extraElement naam="geboorteplaatsnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <StUF:extraElement naam="gemeentenaamInschrijving" xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <StUF:extraElement naam="opgemaakteNaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <StUF:extraElement naam="omschrijvingPlaatsOverlijden" xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <StUF:extraElement naam="geslachtsnaamEchtgenoot" xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <StUF:extraElement naam="voorvoegselsGeslachtsnaamEchtgenoot" xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <StUF:extraElement naam="codeGeboorteplaats" xsi:nil="true" StUF:noValue="geenWaarde"/>
+         </extraElementen>
+
+         <PRSADRINS soortEntiteit="R">
+            <ADR soortEntiteit="F">
+               <landcode xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <postcode xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <woonplaatsnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <straatnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <huisnummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <huisletter xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <huisnummertoevoeging xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <aanduidingBijHuisnummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <locatieomschrijving xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <ingangsdatum xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <einddatum xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <straatcode xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <buurtcode xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <wijkcode xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <gemeentecode xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <extraElementen>
+                  <StUF:extraElement naam="gemeentenaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="adresBinnenlandOpgemaakt1" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="adresBinnenlandOpgemaakt2" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="adresBinnenlandOpgemaakt3" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="landnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="officieleStraatnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="identificatieNummerAanduiding" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="authentiekeIdentificatieOpenbareRuimte" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="authentiekeIdentificatieWoonplaats" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="authentiekeWoonplaatsnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="authentiekeGemeentecode" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="authentiekeWoonplaatscode" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="identificatiecodeVerblijfplaats" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="identificatieTGO" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="identificatieWoonplaats" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="openbareRuimteNaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="identificatieAOA" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="identificatieOpenbareRuimte" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="woonplaatsNaamBAG" xsi:nil="true" StUF:noValue="geenWaarde"/>
+               </extraElementen>
+            </ADR>
+         </PRSADRINS>
+
+         <PRSADRVBL soortEntiteit="R">
+            <ADR soortEntiteit="F">
+               <landcode xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <postcode xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <woonplaatsnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <straatnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <huisnummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <huisletter xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <huisnummertoevoeging xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <aanduidingBijHuisnummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <locatieomschrijving xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <ingangsdatum xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <einddatum xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <straatcode xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <buurtcode xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <wijkcode xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <gemeentecode xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <extraElementen>
+                  <StUF:extraElement naam="gemeentenaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="adresBinnenlandOpgemaakt1" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="adresBinnenlandOpgemaakt2" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="adresBinnenlandOpgemaakt3" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="landnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="officieleStraatnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="identificatieNummerAanduiding" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="authentiekeIdentificatieOpenbareRuimte" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="authentiekeIdentificatieWoonplaats" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="authentiekeWoonplaatsnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="authentiekeGemeentecode" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="authentiekeWoonplaatscode" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="identificatiecodeVerblijfplaats" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="identificatieTGO" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="identificatieWoonplaats" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="openbareRuimteNaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="identificatieAOA" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="identificatieOpenbareRuimte" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="woonplaatsNaamBAG" xsi:nil="true" StUF:noValue="geenWaarde"/>
+               </extraElementen>
+            </ADR>
+         </PRSADRVBL>
+
+         <PRSNAT soortEntiteit="R">
+            <NAT soortEntiteit="T">
+               <code xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <omschrijving xsi:nil="true" StUF:noValue="geenWaarde"/>
+            </NAT>
+         </PRSNAT>
+
+         <PRSPRSHUW soortEntiteit="R">
+            <datumSluiting xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <plaatsSluiting xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <landSluiting xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <soortVerbintenis xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <datumOntbinding xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <redenOntbinding xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <extraElementen>
+               <StUF:extraElement naam="landnaamSluiting" xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <StUF:extraElement naam="plaatsnaamOntbindingOmschrijving" xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <StUF:extraElement naam="plaatsnaamSluitingOmschrijving" xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <StUF:extraElement naam="redenOntbindingOmschrijving" xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <StUF:extraElement naam="soortVerbintenisOmschrijving" xsi:nil="true" StUF:noValue="geenWaarde"/>
+            </extraElementen>
+            <PRS soortEntiteit="F">
+               <a-nummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+	       <bsn-nummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <voornamen xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <voorletters xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <voorvoegselGeslachtsnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <geslachtsnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <geboortedatum xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <geboorteplaats xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <codeGeboorteland xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <geslachtsaanduiding xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <datumOverlijden xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <burgerlijkeStaat xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <extraElementen>
+                  <StUF:extraElement naam="omschrijvingBurgerlijkeStaat" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="geboortelandnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="geboorteplaatsnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="opgemaakteNaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+               </extraElementen>
+            </PRS>
+         </PRSPRSHUW>
+
+         <PRSPRSKND soortEntiteit="R">
+            <PRS soortEntiteit="F">
+               <a-nummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+	       <bsn-nummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <voornamen xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <voorletters xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <voorvoegselGeslachtsnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <geslachtsnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <geboortedatum xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <geboorteplaats xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <codeGeboorteland xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <geslachtsaanduiding xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <datumOverlijden xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <datumInschrijvingGemeente xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <datumOpschortingBijhouding xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <indicatieGezagMinderjarige xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <indicatieCuratelestelling xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <burgerlijkeStaat xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <extraElementen>
+                  <StUF:extraElement naam="omschrijvingBurgerlijkeStaat" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="geboortelandnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="geboorteplaatsnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="gemeentenaamInschrijving" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="opgemaakteNaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="omschrijvingPlaatsOverlijden" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="geslachtsnaamEchtgenoot" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="voorvoegselsGeslachtsnaamEchtgenoot" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="codeGeboorteplaats" xsi:nil="true" StUF:noValue="geenWaarde"/>
+               </extraElementen>
+            </PRS>
+         </PRSPRSKND>
+
+        <PRSPRSOUD soortEntiteit="R">
+            <PRS soortEntiteit="F">
+               <a-nummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+	       <bsn-nummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <voornamen xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <voorletters xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <voorvoegselGeslachtsnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <geslachtsnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <geboortedatum xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <geboorteplaats xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <codeGeboorteland xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <geslachtsaanduiding xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <datumOverlijden xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <datumInschrijvingGemeente xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <datumOpschortingBijhouding xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <indicatieCuratelestelling xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <burgerlijkeStaat xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <extraElementen>
+                  <StUF:extraElement naam="aanduidingGegevensInOnderzoek" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="aanduidingNaamgebruikOmschrijving" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="omschrijvingBurgerlijkeStaat" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="geboortelandnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="geboorteplaatsnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="gemeentenaamInschrijving" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="opgemaakteNaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="omschrijvingPlaatsOverlijden" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="geslachtsnaamEchtgenoot" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="voorvoegselsGeslachtsnaamEchtgenoot" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="codeGeboorteplaats" xsi:nil="true" StUF:noValue="geenWaarde"/>
+               </extraElementen>
+            </PRS>
+         </PRSPRSOUD>
+
+      </PRS>
+   </SectorModel:body>
+</SectorModel:vraagBericht>

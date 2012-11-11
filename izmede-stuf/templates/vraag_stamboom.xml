@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SectorModel:vraagBericht xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StUF="http://www.egem.nl/StUF/StUF0204" xmlns:SectorModel="http://www.egem.nl/StUF/sector/bg/0204">
+   <stuurgegevens xmlns="http://www.egem.nl/StUF/StUF0204">
+      <berichtsoort>Lv01</berichtsoort>
+      <entiteittype>PRS</entiteittype>
+      <sectormodel>BG</sectormodel>
+      <versieStUF>0204</versieStUF>
+      <versieSectormodel>0204</versieSectormodel>
+      <zender>
+         <organisatie />
+         <applicatie>IZM</applicatie>
+      </zender>
+      <ontvanger>
+         <applicatie>CGM</applicatie>
+      </ontvanger>
+      <referentienummer>%(referentienummer)s</referentienummer>
+      <tijdstipBericht>%(tijdstipbericht)s</tijdstipBericht>
+      <vraag>
+         <sortering>07</sortering>
+         <maximumAantal>100</maximumAantal>
+      </vraag>
+   </stuurgegevens>
+   <SectorModel:body xmlns="http://www.egem.nl/StUF/sector/bg/0204" xmlns:StUF="http://www.egem.nl/StUF/StUF0204" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <PRS soortEntiteit="F">
+         <bsn-nummer>%(BSN_van)s</bsn-nummer>
+      </PRS>
+      <PRS soortEntiteit="F">
+         <bsn-nummer>%(BSN_tot)s</bsn-nummer>
+      </PRS>
+
+      <PRS soortEntiteit="F">
+         <bsn-nummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+
+         <PRSPRSHUW soortEntiteit="R">
+            <datumSluiting xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <datumOntbinding xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <redenOntbinding xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <PRS soortEntiteit="F">
+	           <bsn-nummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+            </PRS>
+         </PRSPRSHUW>
+
+         <PRSPRSKND soortEntiteit="R">
+            <PRS soortEntiteit="F">
+	           <bsn-nummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+            </PRS>
+         </PRSPRSKND>
+
+        <PRSPRSOUD soortEntiteit="R">
+            <PRS soortEntiteit="F">
+	           <bsn-nummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+            </PRS>
+         </PRSPRSOUD>
+
+      </PRS>
+   </SectorModel:body>
+</SectorModel:vraagBericht>

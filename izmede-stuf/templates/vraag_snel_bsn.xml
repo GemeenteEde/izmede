@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SectorModel:vraagBericht xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StUF="http://www.egem.nl/StUF/StUF0204" xmlns:SectorModel="http://www.egem.nl/StUF/sector/bg/0204">
+   <stuurgegevens xmlns="http://www.egem.nl/StUF/StUF0204">
+      <berichtsoort>Lv01</berichtsoort>
+      <entiteittype>PRS</entiteittype>
+      <sectormodel>BG</sectormodel>
+      <versieStUF>0204</versieStUF>
+      <versieSectormodel>0204</versieSectormodel>
+      <zender>
+         <organisatie />
+         <applicatie>IZM</applicatie>
+      </zender>
+      <ontvanger>
+         <applicatie>CGM</applicatie>
+      </ontvanger>
+      <referentienummer>%(referentienummer)s</referentienummer>
+      <tijdstipBericht>%(tijdstipbericht)s</tijdstipBericht>
+      <vraag>
+         <sortering>07</sortering>
+         <maximumAantal>100</maximumAantal>
+      </vraag>
+   </stuurgegevens>
+   <SectorModel:body xmlns="http://www.egem.nl/StUF/sector/bg/0204" xmlns:StUF="http://www.egem.nl/StUF/StUF0204" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <PRS soortEntiteit="F">
+         <bsn-nummer>%(BSN_van)s</bsn-nummer>
+      </PRS>
+      <PRS soortEntiteit="F">
+         <bsn-nummer>%(BSN_tot)s</bsn-nummer>
+      </PRS>
+
+      <PRS soortEntiteit="F">
+         <bsn-nummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <voornamen xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <voorvoegselGeslachtsnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <geslachtsnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <geboortedatum xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <geslachtsaanduiding xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <datumOverlijden xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <indicatieGeheim xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <burgerlijkeStaat xsi:nil="true" StUF:noValue="geenWaarde"/>
+         <extraElementen>
+            <StUF:extraElement naam="omschrijvingBurgerlijkeStaat" xsi:nil="true" StUF:noValue="geenWaarde"/>
+            <StUF:extraElement naam="geboorteplaatsnaam" xsi:nil="true" StUF:noValue="geenWaarde"/>
+         </extraElementen>
+
+         <PRSADRINS soortEntiteit="R">
+            <ADR soortEntiteit="F">
+               <postcode xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <woonplaatsnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <straatnaam xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <huisnummer xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <huisletter xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <huisnummertoevoeging xsi:nil="true" StUF:noValue="geenWaarde"/>
+               <extraElementen>
+                  <StUF:extraElement naam="adresBinnenlandOpgemaakt1" xsi:nil="true" StUF:noValue="geenWaarde"/>
+                  <StUF:extraElement naam="adresBinnenlandOpgemaakt2" xsi:nil="true" StUF:noValue="geenWaarde"/>
+               </extraElementen>
+            </ADR>
+         </PRSADRINS>
+      </PRS>
+   </SectorModel:body>
+</SectorModel:vraagBericht>
