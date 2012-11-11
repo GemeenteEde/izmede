@@ -1,0 +1,7 @@
+table.overzicht { border-collapse:collapse; }
+
+/*table.overzicht, */
+table.overzicht th, table.overzicht td { border: 1px solid black; padding: 5px; }
+
+th { text-align: left; }
+td { vertical-align: top; }

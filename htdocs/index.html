@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Integrale Zoek Module</title>
+		<link type="text/css" href="css/smoothness/jquery-ui-1.8.21.custom.css" rel="stylesheet" media="projection,screen" />
+		<link type="text/css" href="css/opmaak.css" rel="stylesheet" />
+		<link type="text/css" href="css/opmaak-print.css" rel="stylesheet" media="print" />
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+		<script type="text/javascript" src="js/utils.js"></script>
+		<script type="text/javascript" src="js/persoonsdossier.js"></script>
+		<script type="text/javascript" src="js/groepsdossier.js"></script>
+		<script type="text/javascript" src="js/zoekformulier.js"></script>
+		<script type="text/javascript">
+            var accordion_index = {'BSN': 0, 'GD': 1, 'PC': 2, 'GROEPALIAS': 3};
+
+            $(function(){
+                $("div#persoonsdossier_wrap").hide();
+                $("div#groepsdossier_wrap").hide();
+                groepNieuw();
+
+				// Accordion
+				$("#accordion").accordion({ header: "h3", clearStyle: true, autoHeight: false });
+
+				// Tabs
+				$('#groepsdossier').tabs();
+				$('#persoonsdossier').tabs();
+
+				// Datepicker
+				$('#datepicker').datepicker({
+					inline: true,
+                    altFormat: "dd-mm-yy",
+                    dateFormat: "ddmmyy"
+				});
+
+				//hover states on the static widgets
+				$('#dialog_link, ul#icons li').hover(
+					function() { $(this).addClass('ui-state-hover'); },
+					function() { $(this).removeClass('ui-state-hover'); }
+				);
+
+			});
+		</script>
+		<style type="text/css">
+			/*demo page css*/
+			body{ font: 62.5% "Trebuchet MS", sans-serif; margin: 50px;}
+			.demoHeaders { margin-top: 2em; }
+			#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+			#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+			ul#icons {margin: 0; padding: 0;}
+			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+			ul#icons span.ui-icon {float: left; margin: 0 4px;}
+		</style>
+	</head>
+	<body>
+        <div id="zoeken_wrap">
+            <h1>Integrale Zoek Module</h1>
+            <!-- Accordion -->
+            <h2 class="demoHeaders">Zoeken in Gemeentelijke Basis Administratie</h2>
+            <div id="accordion">
+                <div id="zoekBSN">
+                    <h3><a href="#BSN">Burgerservicenummer</a></h3>
+                    <div>
+                    Vul het Burgerservice nummer in en druk vervolgens op zoeken.
+                    <form id="BSN" style="clear: both;" onsubmit="return zoekSTUF(this);">
+                        <input name="BSN" class="search" title="Burgerservicenummer" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+                        <input type="submit" value="Zoeken"/>
+                        <table class="form_result"><tbody /></table>
+                    </form>
+                    </div>
+                </div>
+                <div id="zoekGD">
+                    <h3><a href="#GD">Geboortedatum</a></h3>
+                    <div>
+                    Kies de geboortedatum (DDMMJJJJ) en druk vervolgens op zoeken.
+                    <form id="GD" style="clear: both;" onsubmit="return zoekSTUF(this);">
+                        <input name="GD" class="search" type="text" id="datepicker" />
+                        <input type="submit" value="Zoeken"/>
+                        <table class="form_result"><tbody /></table>
+                    </form>
+                    </div>
+                </div>
+                <div id="zoekPC">
+                    <h3><a href="#PC">Postcode / Huisnummer</a></h3>
+                    <div>
+                    Vul de postcode en huisnummer combinatie in en druk vervolgens op zoeken.
+                    <form id="PC" style="clear: both;" onsubmit="return zoekPC(this);">
+                        <input class="postcode" maxlength="6" size="6" name="PC" title="Postcode" onkeyup="this.value=this.value.replace(/[^0-9A-Za-z]/,'')" /> /
+                        <input size="3" class="huisnummer" name="HN" title="Huisnummer" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+                        <input type="submit" value="Zoeken"/>
+                        <table class="form_result"><tbody /></table>
+                    </form>
+                    </div>
+                </div>
+                <div id="zoekGROEPALIAS">
+                    <h3><a href="#GROEPALIAS">Gezins-/Groepsdossiers</a></h3>
+                    <div>
+                    Vul een steekwoord in voor het groepsdossier en druk vervolgens op zoeken.
+                    <form id="GROEPALIAS" style="clear: both;" onsubmit="return zoekGROEPALIAS(this);">
+                        <input name="GROEPALIAS" class="search" title="Groepsdossier" />
+                        <input type="submit" value="Zoeken"/>
+                        <table class="form_result"><tbody /></table>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+	
+        <div id="groepsdossier_wrap">	
+            <h2 class="demoHeaders">Gezins-/Groepsdossier</h2>
+            <button class="ui-state-default ui-corner-all" title="Print" onclick="return groepPrint();"><span class="ui-icon ui-icon-print"></span></button>
+            <button class="ui-state-default ui-corner-all" title="Opslaan" onclick="return groepOpslaan();"><span class="ui-icon ui-icon-disk"></span></button>
+            <button class="ui-state-default ui-corner-all" title="Nieuw" onclick="return groepNieuw();"><span class="ui-icon ui-icon-document"></span></button>
+            <button class="ui-state-default ui-corner-all" title="Verwijderen" onclick="return groepVerwijderen();"><span class="ui-icon ui-icon-trash"></span></button>
+
+            <div id="groepsdossier">
+                <ul>
+                    <li><a href="#groepsdossier-personalia">Personalia</a></li>
+                    <li id="gdtab-samenvatting"><a href="#groepsdossier-samenvatting">Samenvatting</a></li>
+                    <li><a href="#groepsdossier-personen">Personen</a></li>
+                </ul>
+                <div class="nobreak" id="groepsdossier-personalia">
+                    <h3 id="groep_alias">Groepsdossier</h3>
+                    <table class="overzicht" id="groep_personalia">
+                        <tbody/>
+                    </table>
+                </div>
+                <div class="nobreak" id="groepsdossier-samenvatting">
+                    <div class="nobreak">
+                        <h3>Samenvatting per bronsysteem</h3>
+                        <table class="overzicht" id="groep_bronsystemen">
+                            <tbody />
+                        </table>
+                    </div>
+
+                    <div class="nobreak">
+                        <h3>Samenvatting per persoon</h3>
+                        <table class="overzicht" id="groep_bronpersonen">
+                            <tbody />
+                        </table>
+                    </div>
+                </div>
+                <div id="groepsdossier-personen">
+                </div>
+            </div>
+        </div>
+
+		<!-- Tabs -->
+        <div id="persoonsdossier_wrap">
+            <h2 class="demoHeaders">Persoonsdossier</h2>
+            <button class="ui-state-default ui-corner-all" title="Print" onclick="persoonPrint()"><span class="ui-icon ui-icon-print"></span></button>
+            <div id="persoonsdossier">
+                <ul class="tabheader">
+                    <li><a href="#tabs-gba">GBA</a></li>
+                    <li><a href="#tabs-adressen">Adressen</a></li>
+                    <li id="tab-samenvatting"><a href="#tabs-samenvatting">Samenvatting</a></li>
+                    <li id="tab-ouders"><a href="#tabs-ouders">Ouders</a></li>
+                    <li id="tab-kinderen"><a href="#tabs-kinderen">Kinderen</a></li>
+                    <li id="tab-huwelijken"><a href="#tabs-huwelijken">Huwelijken</a></li>
+                    <li id="tab-uitkeringen"><a href="#tabs-uitkeringen">Uitkeringen</a></li>
+                    <li id="tab-schuldhulp"><a href="#tabs-schuldhulp">Schuldhulp</a></li>
+                    <li id="tab-leerplicht"><a href="#tabs-leerplicht">Leerplicht</a></li>
+                    <!-- <li><a href="#tabs-meldingen">Meldingen</a></li> -->
+                </ul>
+                <div class="nobreak" id="tabs-gba">
+                    <table><tbody id="gba" /></table>
+                </div>
+                <div class="nobreak" id="tabs-samenvatting">
+                <h3>Samenvatting:</h3>
+                    <table class="overzicht"><tbody id="samenvatting" /></table>
+                </div>
+                <div class="nobreak" id="tabs-adressen">
+                <h3>Adressen:</h3>
+                    <table class="overzicht"><tbody id="adressen" /></table>
+                </div>
+                <div class="nobreak" id="tabs-ouders">
+                <h3>Ouders:</h3>
+                    <table class="overzicht"><tbody id="ouders" /></table>
+                </div>
+                <div class="nobreak" id="tabs-kinderen">
+                <h3>Kinderen:</h3>
+                    <table class="overzicht"><tbody id="kinderen" /></table>
+                </div>
+                <div class="nobreak" id="tabs-huwelijken">
+                <h3>Huwelijken:</h3>
+                    <table class="overzicht"><tbody id="huwelijken" /></table>
+                </div>
+                <div class="nobreak" id="tabs-uitkeringen">
+                <h3>Uitkeringen:</h3>
+                    <table class="overzicht"><tbody id="uitkeringen" /></table>
+                </div>
+                <div class="nobreak" id="tabs-schuldhulp">
+                <h3>Schuldhulp:</h3>
+                    <table class="overzicht"><tbody id="schuldhulp" /></table>
+                </div>
+                <div class="nobreak" id="tabs-leerplicht">
+                <h3>Leerplicht:</h3>
+                <p id="lptbeheerder"></p>
+                    <table class="overzicht"><tbody id="leerplicht"/></table>
+                </div>
+                <!-- <div id="tabs-meldingen">
+                    <div id="radioset">
+                        <input type="radio" id="radio1" name="radio" /><label for="radio1">Aan</label>
+                        <input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Uit</label>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+	</body>
+</html>
