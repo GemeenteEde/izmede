@@ -1,7 +1,7 @@
 izmede
 ======
 
-Integrale Zorg Module Ede is een rapportage hulpmiddel om een gelimiteerd aantal medewerkers ambtshalve toegang te geven tot de Gemeentelijke Basis Administratie en aanverwante informatiediensten.
+Integrale Zoek Module Ede is een rapportage hulpmiddel om een gelimiteerd aantal medewerkers ambtshalve toegang te geven tot de Gemeentelijke Basis Administratie en aanverwante informatiediensten.
 
 In opdracht van het Veiligheidshuis Ede is er een systeem ontworpen dat haar medewerkers toegang geeft tot de verschillende loketten binnen de gemeente en hiervan een rapport maakt. Voor het systeem operationeel was moest voor iedere indicatie, ieder loket afzonderlijk worden nagelopen om een rapport op te stellen. Buiten de hoeveelheid tijd die hiermee is gemoeid, zorgt het tevens voor niet beschikbaar zijn van actuele gegevens waar in sommige gevallen een acute noodzaak voor is.
 
