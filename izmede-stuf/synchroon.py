@@ -17,7 +17,7 @@ def testTemplate(bestandsnaam, variabelen):
     return template % variabelen
 
 def notfound(start_response):
-    start_response('404 File Not Found', COMMON_HEADERS + [('Content-length', '2')])
+    start_response('404 File Not Found', COMMON_HEADERS + [('Content-length', '12')])
     yield '<notfound />'
 
 def Synchroon(environ, start_response):
